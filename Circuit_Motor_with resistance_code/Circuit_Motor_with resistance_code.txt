@@ -1,0 +1,25 @@
+#include <Servo.h>
+
+
+Servo servo_11;
+
+
+int x = 0 , y = 0;
+
+
+void setup() {
+  servo_11.attach(11);
+ }
+
+void loop() {
+  
+  x = analogRead(A0);
+  
+  y = map (x , 0 , 1023 , 15 , 170 );
+  
+  servo_11.write(y);
+ 
+   
+    }
+
+
